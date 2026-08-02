@@ -1,7 +1,7 @@
 # Addition function
 def add_matrix(mat1,mat2):
   rows = len(mat1)
-  columns = len(mat1[1])
+  columns = len(mat1[0])
 
   result = []
   for i in range(rows):
@@ -28,5 +28,17 @@ def sub_matrix(mat1,mat2):
 
 # Multiplication function
 def mult_matrix(mat1,mat2):
+  rows = len(mat1)
+  cols = len(mat1[0])
   result = []
+
+  for i in range(rows):
+    new_row = []
+    for j in range(cols):
+      new_element = 0
+      for k in range(cols):
+        new_element += mat1[i][k]*mat2[k][j]
+      new_row.append(new_element)
+    result.append(new_row)
+
   return result

@@ -1,12 +1,32 @@
-from matrix_operation import add_matrix , sub_matrix
+from matrix_operation import add_matrix , sub_matrix , mult_matrix
 
-ls = list(map(int,input("Matrix elements : ").split()))
-matrix = []
+print("Give two 3X3 matrix")
+mat1 = []
+mat2 = []
 
-# Aim - to form a 2-d matrix from a given 1-d list of integers
+ls1 = list(map(int,input("Matrix elements : ").split()))  
 row = []
 for i in range(0,9,3):
   for j in range(i,i+3):
-    row.append(ls[j])
-  matrix.append(row)
+    row.append(ls1[j])
+  mat1.append(row)
   row = []
+
+ls2 = list(map(int,input("Matrix elements : ").split()))
+row = []
+for i in range(0,9,3):
+  for j in range(i,i+3):
+    row.append(ls2[j])
+  mat2.append(row)
+  row = []
+
+print(mat1)
+print(mat2)
+
+# For testing
+# mat1 = [[1,2,3],[4,5,6],[7,8,9]]
+# mat2 = [[1,2,3],[4,5,6],[7,8,9]]
+  
+
+result = mult_matrix(mat1,mat2)
+print(result)
