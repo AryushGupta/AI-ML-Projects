@@ -1,4 +1,4 @@
-from matrix_operation import add_matrix , sub_matrix , mult_matrix , mat_transpose
+from matrix_operation import add_matrix , sub_matrix , mult_matrix , mat_transpose , scal_mult_mat
 
 print("Give two 3X3 matrix")
 mat1 = []

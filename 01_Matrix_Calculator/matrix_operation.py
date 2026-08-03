@@ -1,5 +1,5 @@
 # Addition function
-def add_matrix(mat1,mat2):
+def add_matrix(mat1 : list[list[int]] , mat2 : list[list[int]]):
   rows = len(mat1)
   columns = len(mat1[0])
 
@@ -13,7 +13,7 @@ def add_matrix(mat1,mat2):
   return result
 
 # Subtraction function
-def sub_matrix(mat1,mat2):
+def sub_matrix(mat1 : list[list[int]] , mat2 : list[list[int]]):
   rows = len(mat1)
   columns = len(mat1[0])
 
@@ -27,7 +27,7 @@ def sub_matrix(mat1,mat2):
   return result
 
 # Multiplication function
-def mult_matrix(mat1,mat2):
+def mult_matrix(mat1 : list[list[int]] , mat2 : list[list[int]]):
   rows = len(mat1)
   cols = len(mat1[0])
   result = []
@@ -44,8 +44,15 @@ def mult_matrix(mat1,mat2):
   return result
 
 # Matrix Transpose
-def mat_transpose(mat):
+def mat_transpose(mat : list[list[int]]):
   for i in range(2):
     for j in range(1,3):
       mat[i][j] , mat[j][i] = mat[j][i] , mat[i][j]
+  return mat
+
+# Scalar Multiplication
+def scal_mult_mat(mat : list[list[int]] , k : int):
+  for i in range(3):
+    for j in range(3):
+      mat[i][j] *= k
   return mat
