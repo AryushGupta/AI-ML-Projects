@@ -1,4 +1,4 @@
-from matrix_operation import add_matrix , sub_matrix , mult_matrix
+from matrix_operation import add_matrix , sub_matrix , mult_matrix , mat_transpose
 
 print("Give two 3X3 matrix")
 mat1 = []
@@ -22,11 +22,3 @@ for i in range(0,9,3):
 
 print(mat1)
 print(mat2)
-
-# For testing
-# mat1 = [[1,2,3],[4,5,6],[7,8,9]]
-# mat2 = [[1,2,3],[4,5,6],[7,8,9]]
-  
-
-result = mult_matrix(mat1,mat2)
-print(result)

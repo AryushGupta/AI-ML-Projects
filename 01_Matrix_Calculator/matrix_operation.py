@@ -42,3 +42,10 @@ def mult_matrix(mat1,mat2):
     result.append(new_row)
 
   return result
+
+# Matrix Transpose
+def mat_transpose(mat):
+  for i in range(2):
+    for j in range(1,3):
+      mat[i][j] , mat[j][i] = mat[j][i] , mat[i][j]
+  return mat
